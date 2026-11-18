@@ -66,8 +66,8 @@ def main():
     if len(sys.argv) < 2:
         print("❌ Использование: python speed_test.py <URL> [количество_запросов]")
         print("📌 Примеры:")
-        print("  python speed_test.py https://speedtest.tele2.net/10MB.zip 10")
-        print("  python speed_test.py https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.tar.gz 5")
+        print("  python speed_test.py https://i.artfile.ru/3750x1500_661039_[www.ArtFile.ru].jpg")
+        print("  python speed_test.py https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png 5")
         sys.exit(1)
     
     url = sys.argv[1]

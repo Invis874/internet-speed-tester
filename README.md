@@ -35,7 +35,7 @@ python speed_test.py <URL> [количество_запросов]
 
 ```bash
 # Тест с 10 запросами (по умолчанию)
-python speed_test.py https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-middle
+python speed_test.py https://i.artfile.ru/3750x1500_661039_[www.ArtFile.ru].jpg
 
 # Тест с 5 запросами
 python speed_test.py https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png 5
