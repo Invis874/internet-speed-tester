@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Скрипт для замера скорости интернета
-Загружает файл по указанному URL, измеряет время и вычисляет скорость
-"""
-
 import time
 import requests
 import sys
@@ -77,7 +71,16 @@ def main():
         sys.exit(1)
     
     url = sys.argv[1]
-    requests_count = int(sys.argv[2]) if len(sys.argv) > 2 else 10
+    
+    try:
+        requests_count = int(sys.argv[2]) if len(sys.argv) > 2 else 10
+    except ValueError:
+        print(f"❌ Количество запросов должно быть целым числом, получено: {sys.argv[2]!r}")
+        sys.exit(1)
+
+    if requests_count < 1:
+        print("❌ Количество запросов должно быть >= 1")
+        sys.exit(1)
     
     try:
         avg_speed, avg_time, total_mb = measure_speed(url, requests_count)
